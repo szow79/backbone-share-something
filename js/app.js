@@ -127,5 +127,5 @@ app.PostsView = Backbone.View.extend({
 });
 
 $(function() {
-  new app.PostsView(); // instatiate the master view and run our app
+  new app.PostsView(); // instantiate the master view and run our app
 });
