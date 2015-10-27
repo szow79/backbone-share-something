@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/application.css">
+
+  <title>Share Anything</title>
+</head>
+<body>
+
+  <header class="float_wrapper">
+    <h1 class="left">Share Anything</h1>
+    <p class="right"></p>
+  </header>
+
+  <main class="float_wrapper">
+    <section id="sidebar" class="sidebar right">
+    </section>
+
+    <section id="posts" class="left content">
+      <script id="postTemplate" type="text/template">
+        <h1><%= title %></h1>
+        <p class="post_details">Written by <%= author %> at <%= date %></p>
+        <p class="post_body"><%= body %></p>
+        <button class="delete">Delete</button>
+      </script>
+    </section>
+    <section id="sidebar" class="sidebar right">
+    </section>
+
+    <section id="post_form_container" class="left content">
+      <h1>Write Your Post</h1>
+        <form id="post_form" action="#">
+          <label for="title">Title:</label><br>
+          <input type="text" name="title"><br>
+
+          <label for="author">Author Name:</label><br>
+          <input type="text" name="author"><br>
+
+          <label for="body">Body:</label><br>
+          <textarea name="body"></textarea><br>
+
+          <input type="submit" name="submit" value="Submit Post"><br>
+        </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Share Anything</p>
+  </footer>
+
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/lib/underscore-min.js"></script>
+  <script src="js/lib/backbone.js"></script>
+  <script src="js/lib/backbone-localstorage-min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
